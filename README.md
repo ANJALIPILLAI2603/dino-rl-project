@@ -4,14 +4,14 @@
 
 A Chrome Dino-style game where **three reinforcement learning algorithms** learn to dodge cactus obstacles simultaneously, displayed side-by-side in Pygame.
 
-
+```
 ┌──────────────┬──────────────┬──────────────┐
 │ Q-Learning │ SARSA │ DQN │
 │ (blue dino) │(orange dino) │(green dino) │
 │ Ep 42 │ Ep 38 │ Ep 51 │
 │ Score 820 │ Score 615 │ Score 1100 │
 └──────────────┴──────────────┴──────────────┘
-
+```
 
 ---
 
@@ -40,6 +40,7 @@ The goal of this project is to compare the learning behavior of different Reinfo
 ### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 ▶️ How to Run
 🔹 Train & watch live
 python main.py
@@ -47,21 +48,25 @@ All three agents train simultaneously in a Pygame window
 Watch them fail early, then gradually improve
 The epsilon bar shows exploration → exploitation
 Press Esc or close the window to stop (models save automatically)
+
 🔹 Headless training (faster)
 python main.py --no-visual --episodes 1500
 Runs training without UI
 Faster execution
 Recommended before demo
+
 🔹 Demo — watch trained agents
 python main.py --demo
 Loads trained models
 Runs agents with ε = 0 (no randomness)
 Shows learned behavior clearly
+
 🧠 Algorithms
 Agent	State type	Algorithm	Key trait
 Q-Learning	Discrete	Off-policy TD	Learns optimal greedy policy
 SARSA	Discrete	On-policy TD	Learns safer, policy-based actions
 DQN	Continuous	Neural Network	Generalizes across states
+
 📊 State Representation
 🔹 Discrete (Q-Learning & SARSA)
 state = distance_bucket (0–10) × 2 + is_jumping (0–1)
@@ -84,20 +89,16 @@ dino_rl/
 ├── train.py         Training loops for all agents
 ├── models/          Saved trained models
 └── requirements.txt
+
 🎮 Controls
 Key / Action	Effect
 Esc	Stop and save models
 Window close (×)	Stop and save models
+
 📌 Key Observations
 Q-Learning learns quickly but may take aggressive actions
 SARSA is more stable and cautious
 DQN performs better in dynamic environments due to generalization
-📌 Conclusion
-
-This project demonstrates how different reinforcement learning algorithms learn and adapt in the same environment. While Q-Learning and SARSA provide a strong foundation, DQN shows improved performance in handling dynamic scenarios.
-
-The real-time visual comparison makes it easier to understand algorithm behavior, making this project both practical and educational.
 
 👩‍💻 Author
-
 Anjali Pillai
