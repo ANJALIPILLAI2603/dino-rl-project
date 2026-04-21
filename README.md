@@ -37,7 +37,7 @@ The goal of this project is to compare the learning behavior of different Reinfo
 
 ## ⚙️ Installation
 
-### 1. Install dependencies
+### Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
